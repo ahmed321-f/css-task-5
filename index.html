@@ -2,29 +2,121 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Freight Services</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Welcome to Our Website</h1>
-    <h2>Login Form</h2>
+    <!-- Social Media -->
+    <div class="social">
+        <a href="https://www.facebook.com/" target="_blank">f</a>
+        <a href="https://www.whatsapp.com/" target="_blank">◉</a>
+        <a href="https://www.linkedin.com/" target="_blank">in</a>
+    </div>
 
-    <form action="signup1.html" method="get">
-        <label>Email:</label>
-        <input type="email" name="email"
-               placeholder="Enter your email" required>
-        <br><br>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
 
-        <label>Password:</label>
-        <input type="password" name="password"
-               placeholder="Enter your password" required>
-        <br><br>
+        <div class="overlay"></div>
 
-        <button type="submit">Login</button>
-    </form>
+        <div class="hero-content">
+            <h1 id="heroTitle">
+                WE MAKE STRONGEST<br>
+                SERVICE ABOVE THE WORLD
+            </h1>
 
-    <p>Don't have an account?</p>
-    <a href="signup1.html">Sign Up</a>
+            <p>
+                We provide professional freight and transportation
+                services around the world with safety and reliability.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn">OUR SERVICE</a>
+                <a href="mailto:info@example.com?subject=Get%20a%20Quote"
+                   class="btn">GET A QUOTE</a>
+            </div>
+        </div>
+
+        <div class="slider-buttons">
+            <button id="prev">❮</button>
+            <button id="next">❯</button>
+        </div>
+
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+
+        <div class="service-container">
+
+            <!-- Ocean Freight -->
+            <div class="card">
+                <div class="image">
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/NYK_Virgo_%288154929586%29.jpg/250px-NYK_Virgo_%288154929586%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                         alt="Ocean Freight">
+                </div>
+
+                <div class="icon">♟</div>
+
+                <h3>OCEAN FREIGHT</h3>
+
+                <p>
+                    It is a long established fact that a reader
+                    will be distracted by the readable content
+                    of a page when looking at its layout.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Containerization"
+                   target="_blank" class="read-btn">Read More</a>
+            </div>
+
+            <!-- Air Freight -->
+            <div class="card">
+                <div class="image">
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/N885FD_B777F_Fedex_%287001569004%29.jpg/250px-N885FD_B777F_Fedex_%287001569004%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                         alt="Air Freight">
+                </div>
+
+                <div class="icon">✈</div>
+
+                <h3>AIR FREIGHT</h3>
+
+                <p>
+                    It is a long established fact that a reader
+                    will be distracted by the readable content
+                    of a page when looking at its layout.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Air_cargo"
+                   target="_blank" class="read-btn">Read More</a>
+            </div>
+
+            <!-- Street Freight -->
+            <div class="card">
+                <div class="image">
+                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Fuel_truck_tanzania.jpg/500px-Fuel_truck_tanzania.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
+                         alt="Street Freight">
+                </div>
+
+                <div class="icon">🚚</div>
+
+                <h3>STREET FREIGHT</h3>
+
+                <p>
+                    It is a long established fact that a reader
+                    will be distracted by the readable content
+                    of a page when looking at its layout.
+                </p>
+
+                <a href="https://en.wikipedia.org/wiki/Road_transport"
+                   target="_blank" class="read-btn">Read More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
