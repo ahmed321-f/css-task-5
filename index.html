@@ -1,122 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freight Services</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Task 4 - Box Model Assignment</title>
+
+<style>
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    font-family: Arial, sans-serif;
+    background: #eef2f7;
+    color: #222;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border: 4px solid #102744;
+    margin-bottom: 25px;
+}
+
+header h1 {
+    margin: 0 0 10px;
+}
+
+section {
+    background: white;
+    padding: 25px;
+    border: 2px solid #d5dce5;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #17365d;
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* WIDTH EXAMPLES */
+
+.width-box {
+    background: #dcecff;
+    border: 5px solid #2878c7;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.box1 {
+    width: 200px;
+}
+
+.box2 {
+    width: 300px;
+    padding: 30px;
+}
+
+.box3 {
+    width: 350px;
+    padding: 15px;
+    border: 10px solid #e58b26;
+}
+
+/* HEIGHT EXAMPLES */
+
+.height-box {
+    width: 250px;
+    background: #dff5e5;
+    border: 5px solid #299653;
+    padding: 15px;
+    margin: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.height1 {
+    height: 100px;
+}
+
+.height2 {
+    height: 150px;
+    padding: 30px;
+}
+
+.height3 {
+    height: 200px;
+    padding: 20px;
+    border: 10px solid #299653;
+}
+
+/* DOCUMENTATION */
+
+.documentation {
+    background: #fff9e8;
+    border: 2px solid #e5b84b;
+    padding: 25px;
+}
+
+.documentation h2 {
+    color: #9a6810;
+}
+
+footer {
+    background: #17365d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 25px;
+}
+
+@media(max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .width-box,
+    .height-box {
+        max-width: 100%;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- Social Media -->
-    <div class="social">
-        <a href="https://www.facebook.com/" target="_blank">f</a>
-        <a href="https://www.whatsapp.com/" target="_blank">◉</a>
-        <a href="https://www.linkedin.com/" target="_blank">in</a>
+<div class="container">
+
+<header>
+    <h1>CSS BOX MODEL</h1>
+    <h3>CSS Task 4</h3>
+    <p>Understanding Width, Height, Padding and Border</p>
+</header>
+
+<section>
+    <h2>1. Introduction</h2>
+    <p>
+        The CSS Box Model is an important concept in CSS.
+        Every HTML element is displayed as a rectangular box.
+        It consists of Content, Padding, Border and Margin.
+    </p>
+</section>
+
+<section>
+    <h2>2. CSS Box Model - Width</h2>
+
+    <p><b>Example 1:</b> Width: 200px, Padding: 20px, Border: 5px</p>
+    <div class="width-box box1">
+        Width Box 1
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
+    <p><b>Example 2:</b> Width: 300px, Padding: 30px, Border: 5px</p>
+    <div class="width-box box2">
+        Width Box 2
+    </div>
 
-        <div class="overlay"></div>
+    <p><b>Example 3:</b> Width: 350px, Padding: 15px, Border: 10px</p>
+    <div class="width-box box3">
+        Width Box 3
+    </div>
 
-        <div class="hero-content">
-            <h1 id="heroTitle">
-                WE MAKE STRONGEST<br>
-                SERVICE ABOVE THE WORLD
-            </h1>
+    <p>
+        <b>Observation:</b> When we change the width,
+        padding and border values, the total size of
+        the element also changes.
+    </p>
+</section>
 
-            <p>
-                We provide professional freight and transportation
-                services around the world with safety and reliability.
-            </p>
+<section>
+    <h2>3. CSS Box Model - Height</h2>
 
-            <div class="hero-buttons">
-                <a href="#services" class="btn">OUR SERVICE</a>
-                <a href="mailto:info@example.com?subject=Get%20a%20Quote"
-                   class="btn">GET A QUOTE</a>
-            </div>
-        </div>
+    <p><b>Example 1:</b> Height: 100px, Padding: 15px</p>
+    <div class="height-box height1">
+        Height Box 1
+    </div>
 
-        <div class="slider-buttons">
-            <button id="prev">❮</button>
-            <button id="next">❯</button>
-        </div>
+    <p><b>Example 2:</b> Height: 150px, Padding: 30px</p>
+    <div class="height-box height2">
+        Height Box 2
+    </div>
 
-    </section>
+    <p><b>Example 3:</b> Height: 200px, Padding: 20px, Border: 10px</p>
+    <div class="height-box height3">
+        Height Box 3
+    </div>
 
-    <!-- Services Section -->
-    <section class="services" id="services">
+    <p>
+        <b>Observation:</b> Changing height, padding
+        and border values affects the total vertical
+        size of the element.
+    </p>
+</section>
 
-        <div class="service-container">
+<section>
+    <h2>4. Four Parts of CSS Box Model</h2>
 
-            <!-- Ocean Freight -->
-            <div class="card">
-                <div class="image">
-                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/NYK_Virgo_%288154929586%29.jpg/250px-NYK_Virgo_%288154929586%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-                         alt="Ocean Freight">
-                </div>
+    <h3>1. Content</h3>
+    <p>The actual text or image inside an HTML element.</p>
 
-                <div class="icon">♟</div>
+    <h3>2. Padding</h3>
+    <p>The space between content and border.</p>
 
-                <h3>OCEAN FREIGHT</h3>
+    <h3>3. Border</h3>
+    <p>The line surrounding the content and padding.</p>
 
-                <p>
-                    It is a long established fact that a reader
-                    will be distracted by the readable content
-                    of a page when looking at its layout.
-                </p>
+    <h3>4. Margin</h3>
+    <p>The space outside the border.</p>
+</section>
 
-                <a href="https://en.wikipedia.org/wiki/Containerization"
-                   target="_blank" class="read-btn">Read More</a>
-            </div>
+<section class="documentation">
+    <h2>5. Assignment Documentation</h2>
 
-            <!-- Air Freight -->
-            <div class="card">
-                <div class="image">
-                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/1/13/N885FD_B777F_Fedex_%287001569004%29.jpg/250px-N885FD_B777F_Fedex_%287001569004%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-                         alt="Air Freight">
-                </div>
+    <h3>Introduction</h3>
+    <p>
+        The purpose of this assignment is to understand
+        the CSS Box Model and how different CSS properties
+        affect the size of HTML elements.
+    </p>
 
-                <div class="icon">✈</div>
+    <h3>Width Experiment</h3>
+    <p>
+        I created three boxes with different width,
+        padding and border values. I observed that
+        changing these values changes the total width
+        of the boxes.
+    </p>
 
-                <h3>AIR FREIGHT</h3>
+    <h3>Height Experiment</h3>
+    <p>
+        I created three boxes with different height,
+        padding and border values. I observed how
+        the total height of each box changes.
+    </p>
 
-                <p>
-                    It is a long established fact that a reader
-                    will be distracted by the readable content
-                    of a page when looking at its layout.
-                </p>
+    <h3>Conclusion</h3>
+    <p>
+        Through this assignment, I learned how the
+        CSS Box Model works. I practiced using content,
+        padding, border and margin. I also understood
+        how width and height affect HTML elements.
+    </p>
 
-                <a href="https://en.wikipedia.org/wiki/Air_cargo"
-                   target="_blank" class="read-btn">Read More</a>
-            </div>
+    <h3>Thank You!</h3>
+</section>
 
-            <!-- Street Freight -->
-            <div class="card">
-                <div class="image">
-                    <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Fuel_truck_tanzania.jpg/500px-Fuel_truck_tanzania.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail"
-                         alt="Street Freight">
-                </div>
+<footer>
+    <h3>CSS Task 4 - Box Model</h3>
+    <p>HTML & CSS Assignment</p>
+</footer>
 
-                <div class="icon">🚚</div>
-
-                <h3>STREET FREIGHT</h3>
-
-                <p>
-                    It is a long established fact that a reader
-                    will be distracted by the readable content
-                    of a page when looking at its layout.
-                </p>
-
-                <a href="https://en.wikipedia.org/wiki/Road_transport"
-                   target="_blank" class="read-btn">Read More</a>
-            </div>
-
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+</div>
 
 </body>
 </html>
