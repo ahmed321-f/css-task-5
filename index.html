@@ -1,269 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSS Task 4 - Box Model Assignment</title>
-
-<style>
-* {
-    box-sizing: content-box;
-}
-
-body {
-    margin: 0;
-    padding: 25px;
-    font-family: Arial, sans-serif;
-    background: #eef2f7;
-    color: #222;
-}
-
-.container {
-    max-width: 1000px;
-    margin: auto;
-}
-
-header {
-    background: #17365d;
-    color: white;
-    text-align: center;
-    padding: 30px;
-    border: 4px solid #102744;
-    margin-bottom: 25px;
-}
-
-header h1 {
-    margin: 0 0 10px;
-}
-
-section {
-    background: white;
-    padding: 25px;
-    border: 2px solid #d5dce5;
-    margin-bottom: 25px;
-}
-
-h2 {
-    color: #17365d;
-}
-
-p {
-    line-height: 1.6;
-}
-
-/* WIDTH EXAMPLES */
-
-.width-box {
-    background: #dcecff;
-    border: 5px solid #2878c7;
-    padding: 20px;
-    margin: 20px 0;
-    text-align: center;
-    font-weight: bold;
-}
-
-.box1 {
-    width: 200px;
-}
-
-.box2 {
-    width: 300px;
-    padding: 30px;
-}
-
-.box3 {
-    width: 350px;
-    padding: 15px;
-    border: 10px solid #e58b26;
-}
-
-/* HEIGHT EXAMPLES */
-
-.height-box {
-    width: 250px;
-    background: #dff5e5;
-    border: 5px solid #299653;
-    padding: 15px;
-    margin: 20px 0;
-    text-align: center;
-    font-weight: bold;
-}
-
-.height1 {
-    height: 100px;
-}
-
-.height2 {
-    height: 150px;
-    padding: 30px;
-}
-
-.height3 {
-    height: 200px;
-    padding: 20px;
-    border: 10px solid #299653;
-}
-
-/* DOCUMENTATION */
-
-.documentation {
-    background: #fff9e8;
-    border: 2px solid #e5b84b;
-    padding: 25px;
-}
-
-.documentation h2 {
-    color: #9a6810;
-}
-
-footer {
-    background: #17365d;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 25px;
-}
-
-@media(max-width: 600px) {
-    body {
-        padding: 10px;
-    }
-
-    .width-box,
-    .height-box {
-        max-width: 100%;
-    }
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vessy | Art Gallery</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">Vessy</div>
 
-<header>
-    <h1>CSS BOX MODEL</h1>
-    <h3>CSS Task 4</h3>
-    <p>Understanding Width, Height, Padding and Border</p>
-</header>
+        <nav>
+            <a href="#categories">Buy Art</a>
+            <a href="#categories">Sell Art</a>
+            <a href="#about">About Us</a>
+        </nav>
 
-<section>
-    <h2>1. Introduction</h2>
-    <p>
-        The CSS Box Model is an important concept in CSS.
-        Every HTML element is displayed as a rectangular box.
-        It consists of Content, Padding, Border and Margin.
-    </p>
-</section>
+        <div class="nav-right">
+            <a href="#account">Your Account</a>
+            <a href="#help">Help</a>
+            <a href="#cart">🛍️</a>
+        </div>
+    </header>
 
-<section>
-    <h2>2. CSS Box Model - Width</h2>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>SIMPLY ART. SIMPLY BEAUTIFUL.</h1>
 
-    <p><b>Example 1:</b> Width: 200px, Padding: 20px, Border: 5px</p>
-    <div class="width-box box1">
-        Width Box 1
-    </div>
+            <p>
+                For centuries, art lovers and buyers have trusted Vessy
+                to discover beautiful and unique artwork.
+            </p>
 
-    <p><b>Example 2:</b> Width: 300px, Padding: 30px, Border: 5px</p>
-    <div class="width-box box2">
-        Width Box 2
-    </div>
+            <form class="search-box" id="searchForm">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Enter Keywords"
+                    required
+                >
 
-    <p><b>Example 3:</b> Width: 350px, Padding: 15px, Border: 10px</p>
-    <div class="width-box box3">
-        Width Box 3
-    </div>
+                <select id="searchType">
+                    <option value="all">All Art</option>
+                    <option value="paintings">Paintings</option>
+                    <option value="photography">Photography</option>
+                    <option value="sculptures">Sculptures</option>
+                    <option value="digital art">Digital Art</option>
+                </select>
 
-    <p>
-        <b>Observation:</b> When we change the width,
-        padding and border values, the total size of
-        the element also changes.
-    </p>
-</section>
+                <button type="submit">⌕</button>
+            </form>
+        </div>
+    </section>
 
-<section>
-    <h2>3. CSS Box Model - Height</h2>
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
 
-    <p><b>Example 1:</b> Height: 100px, Padding: 15px</p>
-    <div class="height-box height1">
-        Height Box 1
-    </div>
+        <h2>CATEGORIES</h2>
 
-    <p><b>Example 2:</b> Height: 150px, Padding: 30px</p>
-    <div class="height-box height2">
-        Height Box 2
-    </div>
+        <div class="gallery">
 
-    <p><b>Example 3:</b> Height: 200px, Padding: 20px, Border: 10px</p>
-    <div class="height-box height3">
-        Height Box 3
-    </div>
+            <a class="category" href="https://en.wikipedia.org/wiki/Painting" target="_blank">
+                <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600" alt="Paintings">
+                <div class="category-name">PAINTINGS<br>& PRINTS</div>
+            </a>
 
-    <p>
-        <b>Observation:</b> Changing height, padding
-        and border values affects the total vertical
-        size of the element.
-    </p>
-</section>
+            <a class="category" href="https://en.wikipedia.org/wiki/Photography" target="_blank">
+                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600" alt="Photography">
+                <div class="category-name">PHOTOGRAPHY</div>
+            </a>
 
-<section>
-    <h2>4. Four Parts of CSS Box Model</h2>
+            <a class="category" href="https://en.wikipedia.org/wiki/Drawing" target="_blank">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=600" alt="Drawing">
+                <div class="category-name">DRAWINGS<br>& ILLUSTRATION</div>
+            </a>
 
-    <h3>1. Content</h3>
-    <p>The actual text or image inside an HTML element.</p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Digital_art" target="_blank">
+                <img src="https://images.unsplash.com/photo-1549490349-8643362247b5?w=600" alt="Digital Art">
+                <div class="category-name">DIGITAL ART</div>
+            </a>
 
-    <h3>2. Padding</h3>
-    <p>The space between content and border.</p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Sculpture" target="_blank">
+                <img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?w=600" alt="Sculptures">
+                <div class="category-name">SCULPTURES<br>& CARVINGS</div>
+            </a>
 
-    <h3>3. Border</h3>
-    <p>The line surrounding the content and padding.</p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Ceramic_art" target="_blank">
+                <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=600" alt="Ceramics">
+                <div class="category-name">CERAMICS<br>& POTTERY</div>
+            </a>
 
-    <h3>4. Margin</h3>
-    <p>The space outside the border.</p>
-</section>
+            <a class="category" href="https://en.wikipedia.org/wiki/Glass_art" target="_blank">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3e/Emona_trgovina_in_obrt_%281%29a.jpg/250px-Emona_trgovina_in_obrt_%281%29a.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Glass Art">
+                <div class="category-name">GLASS</div>
+            </a>
 
-<section class="documentation">
-    <h2>5. Assignment Documentation</h2>
+            <a class="category" href="https://en.wikipedia.org/wiki/Jewellery" target="_blank">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2e/Golden_bracelets_with_snakes_at_the_National_Archaeological_Museum_of_Athens_on_1_June_2018.jpg/250px-Golden_bracelets_with_snakes_at_the_National_Archaeological_Museum_of_Athens_on_1_June_2018.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Jewelry">
+                <div class="category-name">JEWELRY</div>
+            </a>
 
-    <h3>Introduction</h3>
-    <p>
-        The purpose of this assignment is to understand
-        the CSS Box Model and how different CSS properties
-        affect the size of HTML elements.
-    </p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Furniture" target="_blank">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/af/Chair_of_Reniseneb_MET_DT536.jpg/250px-Chair_of_Reniseneb_MET_DT536.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Furniture">
+                <div class="category-name">FURNITURE</div>
+            </a>
 
-    <h3>Width Experiment</h3>
-    <p>
-        I created three boxes with different width,
-        padding and border values. I observed that
-        changing these values changes the total width
-        of the boxes.
-    </p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Textile_arts" target="_blank">
+                <img src="https://images.unsplash.com/photo-1600166898405-da9535204843?w=600" alt="Textile">
+                <div class="category-name">TEXTILE<br>& APPAREL</div>
+            </a>
 
-    <h3>Height Experiment</h3>
-    <p>
-        I created three boxes with different height,
-        padding and border values. I observed how
-        the total height of each box changes.
-    </p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Antique" target="_blank">
+                <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Antique_items_for_sale_at_a_roadside_shop_in_Ballygunge%2C_Kolkata.jpg/250px-Antique_items_for_sale_at_a_roadside_shop_in_Ballygunge%2C_Kolkata.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail" alt="Antiques">
+                <div class="category-name">ANTIQUES<br>& COLLECTIBLES</div>
+            </a>
 
-    <h3>Conclusion</h3>
-    <p>
-        Through this assignment, I learned how the
-        CSS Box Model works. I practiced using content,
-        padding, border and margin. I also understood
-        how width and height affect HTML elements.
-    </p>
+            <a class="category" href="https://en.wikipedia.org/wiki/Crafts" target="_blank">
+                <img src="https://images.unsplash.com/photo-1452860606245-08befc0ff44b?w=600" alt="Crafts">
+                <div class="category-name">CRAFTS<br>& OTHER ART</div>
+            </a>
 
-    <h3>Thank You!</h3>
-</section>
+        </div>
+    </section>
 
-<footer>
-    <h3>CSS Task 4 - Box Model</h3>
-    <p>HTML & CSS Assignment</p>
-</footer>
+    <!-- FOOTER -->
+    <footer id="about">
+        <h2>VESSY ART GALLERY</h2>
+        <p>Discover the beauty of art.</p>
+        <p>© 2026 Vessy. All Rights Reserved.</p>
+    </footer>
 
-</div>
+    <!-- JAVASCRIPT -->
+    <script>
+        const form = document.getElementById("searchForm");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const keyword = document.getElementById("searchInput").value.trim();
+            const type = document.getElementById("searchType").value;
+
+            if (keyword !== "") {
+                const search = type === "all" ? keyword : type + " " + keyword;
+
+                window.open(
+                    "https://en.wikipedia.org/w/index.php?search=" +
+                    encodeURIComponent(search),
+                    "_blank"
+                );
+            }
+        });
+    </script>
 
 </body>
 </html>
